@@ -1,0 +1,34 @@
+git clone git://git.osmocom.org/libosmocore.git
+sudo aptitude install libtool dh-autoreconf doxygen
+(cd libosmocore && dpkg-buildpackage -b)
+
+sudo dpkg -i libosmocore4_0.6.4+git3_amd64.deb
+sudo dpkg -i libosmogsm4_0.6.4+git3_amd64.deb
+sudo dpkg -i libosmovty0_0.6.4+git3_amd64.deb
+sudo dpkg -i libosmogb3_0.6.4+git3_amd64.deb
+sudo dpkg -i libosmocodec0_0.6.4+git3_amd64.deb
+sudo dpkg -i libosmocore_0.6.4+git3_amd64.deb
+sudo dpkg -i libosmocore-dev_0.6.4+git3_amd64.deb
+
+git clone git://git.osmocom.org/libosmo-abis.git
+sudo aptitude install libortp-dev
+(cd libosmo-abis && dpkg-buildpackage -b)
+
+sudo dpkg -i libosmoabis1_0.1.5+git1_amd64.deb 
+sudo dpkg -i libosmotrau0_0.1.5+git1_amd64.deb 
+sudo dpkg -i libosmo-abis_0.1.5+git1_amd64.deb 
+sudo dpkg -i libosmo-abis-dev_0.1.5+git1_amd64.deb 
+
+git clone git://git.osmocom.org/libosmo-sccp
+(cd libosmo-sccp && dpkg-buildpackage -b)
+
+sudo dpkg -i libosmo-sccp_0.0.6.3_amd64.deb 
+sudo dpkg -i libosmo-sccp-dev_0.0.6.3_amd64.deb 
+
+git clone git://git.osmocom.org/openbsc.git
+sudo aptitude install libgtp-dev libdbi0-dev libdbd-sqlite3
+(cd openbsc && dpkg-buildpackage -b)
+
+sudo dpkg -i osmocom-bsc_0.13.0_amd64.deb 
+sudo dpkg -i osmocom-nitb_0.13.0_amd64.deb 
+

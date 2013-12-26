@@ -1,0 +1,7 @@
+*.deb
+*.changes
+libosmo-abis/
+libosmo-sccp/
+libosmocore/
+openbsc/
+var/hlr.sqlite3
