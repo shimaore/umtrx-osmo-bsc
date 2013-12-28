@@ -25,10 +25,11 @@ git clone git://git.osmocom.org/libosmo-sccp
 sudo dpkg -i libosmo-sccp_0.0.6.3_amd64.deb 
 sudo dpkg -i libosmo-sccp-dev_0.0.6.3_amd64.deb 
 
-git clone git://git.osmocom.org/openbsc.git
+git clone -b jolly/testing git://git.osmocom.org/openbsc.git
 sudo aptitude install libgtp-dev libdbi0-dev libdbd-sqlite3
 (cd openbsc && dpkg-buildpackage -b)
+# Note: that last command _will fail_ with the `jolly/testing` branch.
+# In that case you will not get any packages.
 
-sudo dpkg -i osmocom-bsc_0.13.0_amd64.deb 
-sudo dpkg -i osmocom-nitb_0.13.0_amd64.deb 
-
+# sudo dpkg -i osmocom-bsc_0.13.0_amd64.deb
+# sudo dpkg -i osmocom-nitb_0.13.0_amd64.deb
